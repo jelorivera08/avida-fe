@@ -1,10 +1,9 @@
-const reducer = ({
-  state = {
-    value: 'foo'
-  },
-  action
-}) => {
-  return state;
-};
+import { combineReducers } from 'redux';
 
-export default reducer;
+import appReducer from './App/reducer';
+import loginReducer from './App/containers/Login/reducer';
+
+export default combineReducers({
+  appReducer,
+  loginReducer
+});
